@@ -9,5 +9,7 @@
     %title= current_page.data.title || "Middleman"
     = stylesheet_link_tag "site"
     = javascript_include_tag "site"
+
+  = partial "layouts/base/nav"
   %body
-    = partial "sections/nav"
+    = yield

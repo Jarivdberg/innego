@@ -12,7 +12,6 @@ set :haml, { :format => :html5 }
 # https://middlemanapp.com/basics/layouts/
 
 # Per-page layout changes
-page "/*", :layout => "layout"
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
