@@ -16,6 +16,11 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+# Rendering settings of Haml and Markdown.
+set :haml, attr_wrapper: '"'
+set :markdown, layout_engine: :haml
+set :markdown_engine, :redcarpet
+
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
 
@@ -35,9 +40,6 @@ page '/*.txt', layout: false
 # https://middlemanapp.com/basics/helper-methods/
 
 # helpers do
-#   def some_helper
-#     'Helping'
-#   end
 # end
 
 # Build-specific configuration
