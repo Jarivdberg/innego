@@ -6,12 +6,26 @@ backend:
 media_folder: "images/uploads" # Folder where user uploaded files should go
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, ie.: "New Post"
-    folder: "source/posts" # The path to the folder where the documents are stored
+  - name: "section" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Section" # Used in the UI, ie.: "New Post"
+    folder: "source/sections" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Foo", name: "foo", widget: "foo"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+  - name: "service" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Service" # Used in the UI, ie.: "New Post"
+    folder: "source/services" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+  - name: "testimonial" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Testimonial" # Used in the UI, ie.: "New Post"
+    folder: "source/testimonials" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Body", name: "body", widget: "markdown"}
